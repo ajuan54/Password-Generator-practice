@@ -14,7 +14,9 @@ body {
   align-items: center;
 }
 .container {
-  align-self: center;
+  display: grid;
+  place-content: center;
+  margin-top: 50px;
 }
 
 h1 {
