@@ -94,6 +94,10 @@ const characters = [
 
 let box1El = document.getElementById("box1");
 let box2El = document.getElementById("box2");
+let box3El = document.getElementById("box3");
+let box4El = document.getElementById("box4");
+
+let password = document.getElementById("password");
 
 function generatePassword1() {
   const passwordAr = [];
@@ -121,7 +125,36 @@ function generatePassword2() {
   }
   return (box2El.textContent = passwordAr[1]);
 }
+function generatePassword3() {
+  const passwordAr = [];
+
+  for (let i = 0; i <= 1; i++) {
+    let password = "";
+    for (let j = 0; j <= 14; j++) {
+      let randomIndex = Math.floor(Math.random() * characters.length);
+      password += characters[randomIndex];
+    }
+    passwordAr.push(password);
+  }
+  return (box3El.textContent = passwordAr[1]);
+}
+function generatePassword4() {
+  const passwordAr = [];
+
+  for (let i = 0; i <= 1; i++) {
+    let password = "";
+    for (let j = 0; j <= 14; j++) {
+      let randomIndex = Math.floor(Math.random() * characters.length);
+      password += characters[randomIndex];
+    }
+    passwordAr.push(password);
+  }
+  return (box4El.textContent = passwordAr[1]);
+}
+
 password.addEventListener("click", function () {
   generatePassword1();
   generatePassword2();
+  generatePassword3();
+  generatePassword4();
 });
