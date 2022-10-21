@@ -86,7 +86,7 @@ button {
   left: 52px;
 }
 #boxes {
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
 }
 hr {
